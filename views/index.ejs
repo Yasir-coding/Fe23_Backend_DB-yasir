@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Document</title>
-</head>
-<body>
-    
-    <p> <%= pageTitle; %></p>
-    <% dbData.forEach( row => {%>
-        <p> <%= row.fName; %> - <%= row.lName; %></p>
-    <% }); %>
-    
+  </head>
+  <body>
+    <p><%= pageTitle; %></p>
 
-</body>
+    <%for(let key in dbData){%> <%const person = dbData[key].namn + " " +
+    dbData[key].ålder + " " + dbData[key].klassnamn + " " +
+    dbData[key].studieår;%>
+    <p id="name"><%=person%></p>
+    <%};%>
+  </body>
 </html>
