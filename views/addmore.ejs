@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('partials/header.ejs') %>
+
+    <%dbData.forEach(key =>{%>
+      <p><%=key[0]%></p>
+    <%});%>
+
+
+  
+    <form action="/addmoreForm1" method="POST">
+      table name:<input type="text" name="selected_table" />
+      <button type="submit">get table</button>
+    </form>
+
+    
+    <%let counter = 0;%>
+    <form action="/addmoreForm2" method="POST">
+      <%dbData.forEach(key =>{%>
+        <%if(counter >0){%>
+        <label><%=key[0]%></label> <input type="text" name=`<%=key[0]%>`>
+        <%}%>
+        <%counter++;%>
+      <%});%>
+      <button type="submit">add klass</button>
+    </form>
+
+
+  </body>
+</html>

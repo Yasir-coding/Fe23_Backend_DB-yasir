@@ -9,13 +9,13 @@
   </head>
   <body>
     <%- include('partials/header.ejs') %>
-
     
     <%- include('partials/getdata.ejs') %>
 
-    <form action="/" method="POST">
-      table name:<input type="text" name="table_name" />
-      <button type="submit">Get table</button>
+    <form action="/add.ejs" method="POST">
+      klassname:<input type="text" name="klassnamn" />
+      klass år:<input type="text" name="studieår" />
+      <button type="submit">add klass</button>
     </form>
   </body>
 </html>

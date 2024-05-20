@@ -10,12 +10,13 @@
   <body>
     <%- include('partials/header.ejs') %>
 
-    
+
+
     <%- include('partials/getdata.ejs') %>
 
-    <form action="/" method="POST">
-      table name:<input type="text" name="table_name" />
-      <button type="submit">Get table</button>
+    <form action="/remove.ejs" method="POST">
+      id:<input type="text" name="id" />
+      <button type="submit">Get id</button>
     </form>
   </body>
 </html>
